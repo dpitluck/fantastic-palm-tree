@@ -11,7 +11,9 @@ baseline_marketing_spend = st.number_input("Baseline Marketing Spend", value=650
 product_margin = st.slider("Product Margin", min_value=0.0, max_value=1.0, value=0.45)
 cogs_pct = 1 - product_margin
 other_costs_pct = st.slider("Other Costs (% of Revenue)", min_value=0.0, max_value=1.0, value=0.30)
-delta_pct = st.slider("Delta % for Elasticity Calculation", min_value=0.001, max_value=0.1, value=0.01)
+
+delta_pct = 0.01 
+# = st.slider("Delta % for Elasticity Calculation", min_value=0.001, max_value=0.1, value=0.01)
 
 # Elasticity function
 def calculate_elasticities(revenue, marketing_spend, cogs_pct, other_costs, delta_pct=0.01):
